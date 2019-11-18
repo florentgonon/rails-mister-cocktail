@@ -1,0 +1,18 @@
+<div class="container">
+    <p><%= link_to "Ajouter un Cocktail", new_cocktail_path, class: "btn btn-secondary" %></p>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-4">
+          <div class="card " style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?cs=srgb&dl=agrumes-alcool-boire-bois-616836.jpg&fm=jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail), class: "btn btn-success" %></h5>
+              <h5 class="card-title"><%= link_to "🗑", cocktail_path(cocktail), method: :delete, data: { confirm: "Êtes vous sure de vouloir supprimer ce cocktail ?"}, class: "btn btn-danger" %></h5>
+              <p class="card-text">Glouglou</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

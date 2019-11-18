@@ -12,6 +12,9 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1"><%= link_to "HOME", cocktails_path, class: "btn btn-warning"  %></span>
+    </nav>
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
